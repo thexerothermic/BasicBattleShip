@@ -1,0 +1,15 @@
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\bin\Debug\net6.0\SimpleBattleship.exe
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\bin\Debug\net6.0\SimpleBattleship.deps.json
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\bin\Debug\net6.0\SimpleBattleship.runtimeconfig.json
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\bin\Debug\net6.0\SimpleBattleship.dll
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\bin\Debug\net6.0\ref\SimpleBattleship.dll
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\bin\Debug\net6.0\SimpleBattleship.pdb
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.csproj.AssemblyReference.cache
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.AssemblyInfoInputs.cache
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.AssemblyInfo.cs
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.csproj.CoreCompileInputs.cache
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.dll
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\ref\SimpleBattleship.dll
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.pdb
+C:\Users\Elija\OneDrive\Documents\Play Programs\C#\SimpleBattleship\SimpleBattleship\obj\Debug\net6.0\SimpleBattleship.genruntimeconfig.cache
