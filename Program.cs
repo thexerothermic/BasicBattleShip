@@ -1,13 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Collections;
 namespace SimpleBattleship
-
 {
-    struct Coordinate
+    public class Coordinate
     {
         public int x;
         public int y;
-        public Coordinate (int x, int y)
+        public override bool Equals(object obj)
+        {
+            if (obj is Coordinate)
+            {
+                var that = obj as Coordinate;
+                return that.x == this.x && that.y == this.y;
+            }
+            return false;
+        }
+        public Coordinate(int x, int y)
         {
             this.x = x;
             this.y = y;
@@ -24,26 +30,26 @@ namespace SimpleBattleship
                     Console.WriteLine("Each number must be inbetween 0 and 99, and no extra characters are allowed.");
                     return new Coordinate(-1, -1);
                 }
-                return new Coordinate (x,y);
+                return new Coordinate(x, y);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 Console.WriteLine("You must enter a coordinate pair in this format, with both x and y between 0 and 99.");
                 Console.WriteLine("NN,NN");
-                return new Coordinate(-1,-1);
+                return new Coordinate(-1, -1);
             }
         }
         public double getDistance(Coordinate c)
         {
-            return Math.Pow(Math.Pow(c.x - x, 2) + Math.Pow(c.y - y, 2),.5);
+            return Math.Pow(Math.Pow(c.x - x, 2) + Math.Pow(c.y - y, 2), .5);
         }
 
     }
-    class Game
+    public class Game
     {
         static public List<Coordinate> getPlayerCoordinates()
         {
-            List<Coordinate> playerCoordinates = new List<Coordinate>();
+            List<Coordinate> playerCoordinates = new();
             Console.WriteLine("Enter the coordinates of your five ships.");
             Console.WriteLine("The x and y coordinates range from 0 to 99.");
             Console.WriteLine("Enter in NN,NN format, and hit return after entering each coordinate.");
@@ -63,7 +69,7 @@ namespace SimpleBattleship
             }
             return playerCoordinates;
         }
-        static public List <Coordinate> getComputerCoordinates()
+        static public List<Coordinate> getComputerCoordinates()
         {
             Random rand = new Random();
             List<Coordinate> computerCoordinates = new List<Coordinate>();
@@ -80,11 +86,11 @@ namespace SimpleBattleship
             while (guess.x == -1)
             {
                 Console.WriteLine("Please enter valid data.");
-                guess = Coordinate.Parse(Console.ReadLine());  
+                guess = Coordinate.Parse(Console.ReadLine());
             }
             return guess;
         }
-        static public void startMatch(List<Coordinate> playerCoordinates,List<Coordinate> computerCoordinates)
+        static public void startMatch(List<Coordinate> playerCoordinates, List<Coordinate> computerCoordinates)
         {
             Random rand = new Random();
             while (playerCoordinates.Count > 0 && computerCoordinates.Count > 0)
@@ -97,16 +103,16 @@ namespace SimpleBattleship
                 }
                 else
                 {
-                    double [] distances = new double [computerCoordinates.Count];
+                    double[] distances = new double[computerCoordinates.Count];
                     for (int k = 0; k < computerCoordinates.Count; k++)
                     {
                         distances[k] = guess.getDistance(computerCoordinates[k]);
                     }
                     Console.WriteLine($"The closest enemy ship to that location is {distances.Min()} miles away.");
                 }
-                if(rand.Next(6) == 5)
+                if (rand.Next(6) == 5)
                 {
-                    Console.WriteLine($"Your ship at X:{playerCoordinates[0].x} Y:{playerCoordinates[0].x} was hit");
+                    Console.WriteLine($"Your ship at X:{playerCoordinates[0].x} Y:{playerCoordinates[0].y} was hit");
                     playerCoordinates.RemoveAt(0);
                     Console.WriteLine($"You have {playerCoordinates.Count} ships remaining.");
                 }
@@ -115,11 +121,11 @@ namespace SimpleBattleship
                     Console.WriteLine("Your opponent missed.");
                 }
             }
-            if(playerCoordinates.Count > 0)
+            if (playerCoordinates.Count > 0)
             {
                 Console.WriteLine("You Win!");
             }
-            else if(computerCoordinates.Count > 0)
+            else if (computerCoordinates.Count > 0)
             {
                 Console.WriteLine("You didn't get it this time! You can try again any time.");
             }
@@ -143,5 +149,3 @@ namespace SimpleBattleship
         }
     }
 }
-
-
